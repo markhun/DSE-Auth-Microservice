@@ -1,0 +1,61 @@
+logging:
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+  loggers:
+    # Overrides the level of above and sets it to DEBUG for specific packages
+    at.ac.univie.dse: DEBUG
+
+#Server configuration.
+server:
+    applicationConnectors:
+        - type: http
+          port: 8080
+        - type: https
+          port: 8085
+          # DSE VPN IP address
+          # bindHost: 0.101.108.13
+          keyStorePath: ms1/dse.keystore
+                    # you can generate your own keys and self-signed cert for https by using the java keytool:
+                    # https://docs.oracle.com/javase/8/docs/technotes/tools/windows/keytool.html
+                    # keytool -genkeypair
+                    #   -keyalg RSA
+                    #   -dname "CN=localhost"
+                    #   -keystore dse.keystore
+                    #   -keypass dse2017
+                    #   -storepass dse2017
+          keyStorePassword: dse2017
+          validateCerts: false
+
+
+database:
+  driverClass: org.h2.Driver
+  user: ms1
+  password: password
+  # specify file path for h2 database here: jdbc:h2:./databasefile
+  url: jdbc:h2:./userdb
+  properties:
+    charSet: UTF-8
+  maxWaitForConnection: 1s
+  validationQuery: "/* ms1 Health Check */ SELECT 1"
+  minSize: 2
+  maxSize: 32
+  checkConnectionWhileIdle: false
+  evictionInterval: 10s
+  minIdleTime: 1 minute
+  properties:
+    hibernate.dialect: org.hibernate.dialect.H2Dialect
+    # this generates additional logging output
+    hibernate.show_sql: true
+    hibernate.generate_statistics: false
+    # validates schema when service is started
+    # if schema validation fails you probably didn't create your database first
+    # please refer to "How to start the ms1 application" in README.md
+    hibernate.hbm2ddl.auto: validate
+
+dse2017:
+  secret: gyswgQL+9ts5xc1XX47Y0xxI7ReNuh/w
+  # can be jws for unencrypted jwt's with signature or
+  # can be jwe for fully encrypted tokens
+  tokenType: jws
+  # API Endpoints starting with /debug/... are only available if debugMode is true
+  debugMode: true

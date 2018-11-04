@@ -1,0 +1,364 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-01-08T20:24:03.304Z",
+	"__export_source": "insomnia.desktop.app:v5.12.4",
+	"resources": [
+		{
+			"_id": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"created": 1510004271636,
+			"description": "## DSE 2017 \nThis Microservice is part of ToDo-List-App and handles authentication and authorization",
+			"modified": 1515102102372,
+			"name": "Microservice1",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_dabc8eab9cec40e7b6c52096eea568ff",
+			"color": null,
+			"created": 1510004271645,
+			"data": {},
+			"isPrivate": false,
+			"modified": 1510004298353,
+			"name": "Base Environment",
+			"parentId": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_436cd88df3ec4e04b54efe95e7917494",
+			"cookies": [],
+			"created": 1510004271638,
+			"modified": 1510004271638,
+			"name": "Default Jar",
+			"parentId": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_c7d1b63d08d34ceab6c59bd06f9b96b2",
+			"created": 1515262735254,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1515262735256,
+			"modified": 1515262735254,
+			"name": "debug",
+			"parentId": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_00c72046ec4b48f7b06e23671492f216",
+			"authentication": {
+				"disabled": false,
+				"password": "testpw",
+				"type": "basic",
+				"username": "newUsername"
+			},
+			"body": {},
+			"created": 1510004371346,
+			"description": "using the BasicAuthenticator.class",
+			"headers": [],
+			"metaSortKey": -1515005660609,
+			"method": "GET",
+			"modified": 1515438121780,
+			"name": "authentication",
+			"parameters": [],
+			"parentId": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://localhost:8085/authentication",
+			"_type": "request"
+		},
+		{
+			"_id": "req_727b87366412483f9f655833781ab109",
+			"authentication": {
+				"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicHJpdmlsZWdlcyI6WyJ0ZXN0aW5nMy0xZjE3LWZha2UtVVVJRC02ZDI3OWRmNjk5NDMiLCJ0ZXN0aW5nNC1mYWtlLVVVSUQtOWY4Ny1lOTRlNjBhOTNmOTkiLCJ0ZXN0aW5nMS01MzQ1LWZha2UtVVVJRC03OTcxZWYzMjMyY2YiLCJ0ZXN0aW5nMi1mYWtlLVVVSUQtODNiMy05NTYzZDk4MTIwNTEiXSwidXNlcm5hbWUiOiJuZXdVc2VybmFtZSIsImlhdCI6MTUxNTMyMDQ5OCwiZXhwIjoxNTE1MzIzMTk4LCJqdGkiOiJ4RzJCYXZHb2tOMmxNVGJyT1AxMVVBIn0.4nFg9Dc0WvpX4tnoMqja3bc6YV3OKikkQY42ay7t1Ts",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1515101239533,
+			"description": "This API Endpoint lets you see the authorizations stored for the user, that sends this request.\nThe Answer is a list of Identifier.\n\nPlease insert valid token under the Auth/Bearer page",
+			"headers": [
+				{
+					"id": "pair_ac050aae0fb749db9f6a934288724847",
+					"name": "Cache-Control",
+					"value": "no-cache"
+				}
+			],
+			"metaSortKey": -1512505015952.5,
+			"method": "GET",
+			"modified": 1515320510966,
+			"name": "authorization",
+			"parameters": [],
+			"parentId": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": false,
+			"settingStoreCookies": false,
+			"url": "https://localhost:8085/authorization",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3034f59c958445faa1fc1660b66bc30a",
+			"authentication": {
+				"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicHJpdmlsZWdlcyI6W10sInVzZXJuYW1lIjoibmV3VXNlcm5hbWUiLCJpYXQiOjE1MTUzMjA0NTcsImV4cCI6MTUxNTMyMzE1NywianRpIjoiblhUYkJtUWZ5Vm9fSXJUVzIxWDg0ZyJ9.tfYZozWUQ_pwgZ18ndt_v9mXIeYjOSz8p3RDNxNLo54",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "[\n\t\"testing1-5345-fake-UUID-7971ef3232cf\",\n\t\"testing2-fake-UUID-83b3-9563d9812051\",\n\t\"testing3-1f17-fake-UUID-6d279df69943\",\n\t\"testing4-fake-UUID-9f87-e94e60a93f99\"\n]"
+			},
+			"created": 1515101399436,
+			"description": "This API Endpoint lets you add authorizations for the user, that sends this request.\nThe request body should contain an array with the Identifiers that should be added.  \nThe Answer is a new token!\n\nPlease insert valid token under the Auth/Bearer page",
+			"headers": [
+				{
+					"id": "pair_6d2e7f01083d49609c0e1939d6ae8f96",
+					"name": "Cache-Control",
+					"value": "no-cache"
+				},
+				{
+					"id": "pair_1ebf3ade995d4976bdc0e7b0bd43a94f",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1511254693649.25,
+			"method": "PUT",
+			"modified": 1515320496890,
+			"name": "authorization",
+			"parameters": [],
+			"parentId": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": false,
+			"settingStoreCookies": false,
+			"url": "https://localhost:8085/authorization",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f743667cf5fb45248bc56cee11dc5d78",
+			"authentication": {
+				"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicHJpdmlsZWdlcyI6WyJ0ZXN0aW5nMy0xZjE3LWZha2UtVVVJRC02ZDI3OWRmNjk5NDMiLCJkMmRiNmM1NS01MzQ1LTRjZDYtYjdkYy03OTcxZWYzMjMyY2YiLCJ0ZXN0aW5nNC1mYWtlLVVVSUQtOWY4Ny1lOTRlNjBhOTNmOTkiLCJ0ZXN0aW5nMS01MzQ1LWZha2UtVVVJRC03OTcxZWYzMjMyY2YiLCJhYTA1MTM5ZC0yNDA1LTQ1YzYtODNiMy05NTYzZDk4MTIwNTEiLCJhMGFlZWMxYi0xZjE3LTRlYTEtYTRmZS02ZDI3OWRmNjk5NDMiLCI2N2Q2OTMzMS0wZmMyLTQ1MjMtOWY4Ny1lOTRlNjBhOTNmOTkiLCJ0ZXN0aW5nMi1mYWtlLVVVSUQtODNiMy05NTYzZDk4MTIwNTEiXSwidXNlcm5hbWUiOiJUZXN0dXNlcjMiLCJpYXQiOjE1MTUxMDE1ODAsImV4cCI6MTUxNTEwNDI4MCwianRpIjoic24zSXI3R2ZMS1dUZnhBYk1sbWRMZyJ9.u6CXbkNfC0eRNJG_h5tDPBxSt3n2X0-yJmr9ep0ZM8g",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "[\n\t\"testing1-5345-fake-UUID-7971ef3232cf\",\n\t\"testing4-fake-UUID-9f87-e94e60a93f99\"\n]"
+			},
+			"created": 1515101667501,
+			"description": "This API Endpoint lets you delete authorizations stored for the user, that sends this request.  \nThe request body should contain an array with the Identifiers that should be deleted.  \nThe Answer is a new token!\n\nPlease insert valid token under the Auth/Bearer page",
+			"headers": [
+				{
+					"id": "pair_14e776ae9f414eb79e7b02fb51f52423",
+					"name": "Cache-Control",
+					"value": "no-cache"
+				},
+				{
+					"id": "pair_b8c4573b79664264bd6bdf45b46b947c",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1510629532497.625,
+			"method": "DELETE",
+			"modified": 1515262533306,
+			"name": "authorization",
+			"parameters": [],
+			"parentId": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": false,
+			"settingStoreCookies": false,
+			"url": "https://localhost:8085/authorization",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b26096c001b14fd69343c483f9dcbdc2",
+			"authentication": {
+				"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicHJpdmlsZWdlcyI6WyJ0ZXN0aW5nMy0xZjE3LWZha2UtVVVJRC02ZDI3OWRmNjk5NDMiLCJ0ZXN0aW5nNC1mYWtlLVVVSUQtOWY4Ny1lOTRlNjBhOTNmOTkiLCJ0ZXN0aW5nMS01MzQ1LWZha2UtVVVJRC03OTcxZWYzMjMyY2YiLCJ0ZXN0aW5nMi1mYWtlLVVVSUQtODNiMy05NTYzZDk4MTIwNTEiXSwidXNlcm5hbWUiOiJuZXdVc2VybmFtZSIsImlhdCI6MTUxNTMyMDQ5OCwiZXhwIjoxNTE1MzIzMTk4LCJqdGkiOiJ4RzJCYXZHb2tOMmxNVGJyT1AxMVVBIn0.4nFg9Dc0WvpX4tnoMqja3bc6YV3OKikkQY42ay7t1Ts",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"new@changed.com\",\n\t\"username\": \"newUsername\",\n\t\"password\": \"testpw\"\n}"
+			},
+			"created": 1515257528416,
+			"description": "this endpoint allows you to change the password and/or email of a user account.\nUsernames can't be changed and trying this will produce a error message",
+			"headers": [
+				{
+					"id": "pair_516fd32aceff4158a63356d2ccaadba0",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1510629532347.625,
+			"method": "PUT",
+			"modified": 1515320530017,
+			"name": "user",
+			"parameters": [],
+			"parentId": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://localhost:8085/user",
+			"_type": "request"
+		},
+		{
+			"_id": "req_7cf7c68aaf8b491490ee4e1054b6dcf1",
+			"authentication": {
+				"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicHJpdmlsZWdlcyI6WyJhYmY1NWZhNy03ZjViLTQ3MDItODVlMy0xMzkxYjNiMzgxZTgiLCI4YWJmYzI5OS04OGZjLTRmODQtYjk5Yy1iM2EyOGY4NDQ4MGEiLCI4OTVjNWE4NS05MWFiLTQ4OTMtOWMxOC05MTk5MzhhM2ExZGUiLCIzZDRjOTJiMC00ZDhmLTQ2ZDMtOGY2ZC04YTVjYzNjNTcwY2QiXSwidXNlcm5hbWUiOiJUZXN0dXNlcjMiLCJpYXQiOjE1MTUyNTc2MDksImV4cCI6MTUxNTI2MDMwOSwianRpIjoiTy1YZWI3cnIwX1lYQmJJSWhuSlI0dyJ9.Hf2quUknWLMaObqRvhCtvMHPrPOQDJ8_PQrIuygw02A",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"new@changed.com\",\n\t\"username\": \"Testuser3\",\n\t\"password\": \"testpw\"\n}"
+			},
+			"created": 1515257827753,
+			"description": "This API Endpoint allows you to delete a user account\n\nPlease insert valid token under the Auth/Bearer page",
+			"headers": [
+				{
+					"id": "pair_7b5eb07e601845038b2dadea2607b945",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1510629532397.625,
+			"method": "DELETE",
+			"modified": 1515262555867,
+			"name": "user",
+			"parameters": [],
+			"parentId": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://localhost:8085/user",
+			"_type": "request"
+		},
+		{
+			"_id": "req_892267a01359439fb89866cf81fb3695",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"newly@created.com\",\n\t\"username\": \"newUsername\",\n\t\"password\": \"testpassword\"\n}"
+			},
+			"created": 1515258285584,
+			"description": "This Endpoint allows you to create a new user account\nno authentication is required",
+			"headers": [
+				{
+					"id": "pair_aff12f0c542349c19e0eb5e7490cc7e1",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1510629532372.625,
+			"method": "POST",
+			"modified": 1515320447772,
+			"name": "user",
+			"parameters": [],
+			"parentId": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://localhost:8085/user",
+			"_type": "request"
+		},
+		{
+			"_id": "req_e47a43b761634543a4dae8d30deeeb47",
+			"authentication": {
+				"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicHJpdmlsZWdlcyI6WyJ0ZXN0aW5nMy0xZjE3LWZha2UtVVVJRC02ZDI3OWRmNjk5NDMiLCJ0ZXN0aW5nNC1mYWtlLVVVSUQtOWY4Ny1lOTRlNjBhOTNmOTkiLCJ0ZXN0aW5nMS01MzQ1LWZha2UtVVVJRC03OTcxZWYzMjMyY2YiLCJ0ZXN0aW5nMi1mYWtlLVVVSUQtODNiMy05NTYzZDk4MTIwNTEiXSwidXNlcm5hbWUiOiJuZXdVc2VybmFtZSIsImlhdCI6MTUxNTQzODEyMiwiZXhwIjoxNTE1NDQwODIyLCJqdGkiOiJfejkzMFgyLXh0dzI3X0p0SWdqQnlRIn0.DeHnLgXsNS8RNIcOqlVeWwoEoRP72hahG4brVG5X4Bk",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1515438020578,
+			"description": "get a new Token if your old one is expiering",
+			"headers": [],
+			"metaSortKey": -1513755338280.75,
+			"method": "GET",
+			"modified": 1515438137831,
+			"name": "authentication/refresh",
+			"parameters": [],
+			"parentId": "wrk_f999e91c69fe4499a9b7b9b1dcec1c50",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://localhost:8085/authentication/refresh",
+			"_type": "request"
+		},
+		{
+			"_id": "req_d5eeb5c4da5b4523aa6f95ae400352d8",
+			"authentication": {
+				"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicHJpdmlsZWdlcyI6W10sInVzZXJuYW1lIjoibmV3VXNlcm5hbWUiLCJpYXQiOjE1MTUzMjA0NTcsImV4cCI6MTUxNTMyMzE1NywianRpIjoiblhUYkJtUWZ5Vm9fSXJUVzIxWDg0ZyJ9.tfYZozWUQ_pwgZ18ndt_v9mXIeYjOSz8p3RDNxNLo54",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1515005660559,
+			"description": "This API Endpoint lets you verify the validity of token. On succesfull authentification/login with a valid JWT the corresponding User object from the database is returned as JSON.\n\nPlease insert valid token under the Auth/Bearer page",
+			"headers": [
+				{
+					"id": "pair_a7ef1699a7a546b5bca05076dccda18f",
+					"name": "Cache-Control",
+					"value": "no-cache"
+				}
+			],
+			"metaSortKey": -1515262753453,
+			"method": "GET",
+			"modified": 1515320464642,
+			"name": "debug/verifyToken",
+			"parameters": [],
+			"parentId": "fld_c7d1b63d08d34ceab6c59bd06f9b96b2",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://localhost:8085/debug/verifyToken",
+			"_type": "request"
+		},
+		{
+			"_id": "req_a40956531fc248fc8638d0a39dbf6a79",
+			"authentication": {
+				"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicHJpdmlsZWdlcyI6WyJhYmY1NWZhNy03ZjViLTQ3MDItODVlMy0xMzkxYjNiMzgxZTgiLCI4YWJmYzI5OS04OGZjLTRmODQtYjk5Yy1iM2EyOGY4NDQ4MGEiLCI4OTVjNWE4NS05MWFiLTQ4OTMtOWMxOC05MTk5MzhhM2ExZGUiLCIzZDRjOTJiMC00ZDhmLTQ2ZDMtOGY2ZC04YTVjYzNjNTcwY2QiXSwidXNlcm5hbWUiOiJUZXN0dXNlcjMiLCJpYXQiOjE1MTUyNTc0ODksImV4cCI6MTUxNTI2MDE4OSwianRpIjoiUW5fQjVWYmlpeHZlWWhRZk4wUlk4dyJ9.OLN7aM0MTlQUZRAtBCZmM-Pf50vKcSwcU0CjwlMfh20",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1515257416141,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1515262753503,
+			"method": "GET",
+			"modified": 1515262781851,
+			"name": "debug/signUpExample",
+			"parameters": [],
+			"parentId": "fld_c7d1b63d08d34ceab6c59bd06f9b96b2",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://localhost:8085/debug/signUpExample",
+			"_type": "request"
+		},
+		{
+			"_id": "req_1126297d7ddf4dca87a919a9e727970c",
+			"authentication": {},
+			"body": {},
+			"created": 1515276719249,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1515262753478,
+			"method": "GET",
+			"modified": 1515325281218,
+			"name": "debug/allUsers",
+			"parameters": [],
+			"parentId": "fld_c7d1b63d08d34ceab6c59bd06f9b96b2",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://localhost:8085/debug/allUsers",
+			"_type": "request"
+		}
+	]
+}

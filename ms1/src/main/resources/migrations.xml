@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+
+    <changeSet id="1" author="MarkusHunner">
+        <createSequence sequenceName="user_sequence"
+                        cycle="false"
+                        incrementBy="1"
+                        ordered="true"
+                        startValue="1"/>
+
+        <createTable tableName="USER">
+            <column name="ID" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="USERNAME" type="varchar(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="EMAIL" type="varchar(60)">
+                    <constraints nullable="false"/>
+            </column>
+            <column name="PASSWORD" type="varchar(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRIVILEGES" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        
+        <createTable tableName="User_privileges">
+            <column name="User_ID" type="int"/>
+            <column name="PRIVILEGES" type="varchar"/>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

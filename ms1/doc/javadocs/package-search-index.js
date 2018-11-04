@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"at.ac.univie.dse"},{"l":"at.ac.univie.dse.auth"},{"l":"at.ac.univie.dse.core"},{"l":"at.ac.univie.dse.db"},{"l":"at.ac.univie.dse.resources"},{"l":"at.ac.univie.dse.resources.dto"}];
