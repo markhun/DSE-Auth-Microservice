@@ -84,25 +84,25 @@ Be aware that all API endpoints starting with `/debug` are only available if you
 
 ### Endpoints to acquire initial tokens
 
-* [Login](ms1/doc/authentication/get.md) : `GET /authentication/`
+* [Login](doc/authentication/get.md) : `GET /authentication/`
 
 ### Endpoints requiring a valid token
-* [Refresh expiring token](ms1/doc/authentication/refresh/get.md) : `GET /authentication/refresh`
+* [Refresh expiring token](doc/authentication/refresh/get.md) : `GET /authentication/refresh`
 
-* [Show authorizations](ms1/doc/authorization/get.md) : `GET /authorization/`
-* [Add authorizations](ms1/doc/authorization/put.md) : `PUT /authorization/`
-* [Remove authorizations](ms1/doc/authorization/delete.md) : `DELETE /authorization/`
+* [Show authorizations](doc/authorization/get.md) : `GET /authorization/`
+* [Add authorizations](doc/authorization/put.md) : `PUT /authorization/`
+* [Remove authorizations](doc/authorization/delete.md) : `DELETE /authorization/`
   
   
-* [Delete User](ms1/doc/user/delete.md) : `DELETE /user/`
-* [Update User](ms1/doc/user/put.md) : `PUT /user/`
+* [Delete User](doc/user/delete.md) : `DELETE /user/`
+* [Update User](doc/user/put.md) : `PUT /user/`
 
 ### Endpoints not requiring authentication
 
-* [Create User](ms1/doc/user/post.md) : `POST /user/`
+* [Create User](doc/user/post.md) : `POST /user/`
 
 ### Endpoints only available in Debug Mode
 
-* [Get Example Body for /user-Endpoint](ms1/doc/debug/signUpExample/get.md) : `GET /debug/signUpExample`
-* [Get all stored Information for a given token](ms1/doc/debug/verifyToken/get.md) : `GET /debug/verifyToken`
-* [Get all stored users](ms1/doc/debug/allUsers/get.md) : `GET /debug/allUsers`
+* [Get Example Body for /user-Endpoint](doc/debug/signUpExample/get.md) : `GET /debug/signUpExample`
+* [Get all stored Information for a given token](doc/debug/verifyToken/get.md) : `GET /debug/verifyToken`
+* [Get all stored users](doc/debug/allUsers/get.md) : `GET /debug/allUsers`
